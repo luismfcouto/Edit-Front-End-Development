@@ -1,0 +1,190 @@
+@import 'typography';
+@import 'colors';
+@import 'buttons';
+
+$bg-color: #F2F5FF;
+
+
+@mixin flex($direction, $justify-content, $wrap-nowrap: wrap) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify-content;
+    flex-wrap: $wrap-nowrap;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+html {
+    background-color: $bg-color;
+}
+
+.navigation {
+    @include flex(row, space-between);
+    padding: 55px 50px;
+}
+
+.text {
+    @include flex(column, flex-start);
+    padding: 0 50px 50px;
+}
+
+.bubble-buttons {
+    @include flex(row, space-between, nowrap);
+    padding: 0 50px;
+}
+
+
+
+.card {
+    border-radius: 20px;
+    margin: 32px 50px;
+    position: relative;
+    overflow: hidden;
+    &::before, &::after {
+        content: '';
+        position: absolute;
+        width: 530px;
+        height: 416px;
+        border-radius: 100%;
+        background-color: #242736;
+        opacity: 0.08;
+    }
+    &::before {
+        bottom: -270px;
+        left: -200px;
+    }
+    &::after {
+        top: -270px;
+        right: -130px;
+    }
+
+    &-content {
+        padding: 37px;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    &-heading {
+        @include flex(row, flex-start, nowrap);
+        align-items: center;
+        h3 {
+            margin: 0 18px;
+        }
+    }
+
+    &-title {
+       padding: 32px 0 103px; 
+    }
+}
+
+
+.task {
+    margin: 45px 50px;
+
+    &-title {
+        margin-bottom: 37px;
+    }
+
+    &-bg {
+        border-radius: 20px;
+        padding: 30px;
+        margin-bottom: 20px;
+    }
+
+    &-box {
+        @include flex(row, space-between, -nowrap);
+        align-items: center;
+    }
+
+    &-info {
+        @include flex(row, flex-start, -nowrap);
+        align-items: center;
+    }
+
+    &-icon {
+        padding: 16px 16px 10px;
+        border-radius: 10px;
+    }
+
+    &-text {
+        @include flex(column, flex-start, -nowrap);
+        padding: 0 25px;
+    }
+
+    &-name {
+        padding-bottom: 8px;
+    }
+
+    &-menu {
+        height: 29px;
+    }
+}
+
+.footer {
+    margin: 50px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    &-navigation {
+        @include flex(row, space-between, nowrap);
+    }
+}
+
+/* TASK.HTML */
+
+.main-box {
+    position: relative;
+    overflow: hidden;
+    &::before {
+        content: '';
+        position: absolute;
+        width: 410px;
+        height: 492px;
+        border-radius: 100%;
+        background-color: #2E3A59;
+        opacity: 0.15;
+        top: -280px;
+        right: -90px;
+    }
+    &-content {
+        position: relative;
+        z-index: 1
+    }
+}
+
+.navigation {
+    @include flex(row, space-between, nowrap);
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.input-name {
+    @include flex(column, -content, -nowrap);
+    margin: 0 50px;
+}
+
+label {
+    margin-bottom: 16px;
+}
+
+input {
+    border: none;
+    border-bottom: 1px solid rgba(215, 221, 240, 0.5);
+    background: none;
+    margin-bottom: 24px;
+}
+
+.input-button {
+    @include flex(row, center, -nowrap);
+    padding: 60px 0 40px;
+    a {
+        padding: 24px 113px;
+        border-radius: 4px;
+    }
+}

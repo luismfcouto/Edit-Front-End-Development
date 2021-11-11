@@ -1,0 +1,451 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+html {
+  font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+  font-size: 46.18px;
+  font-weight: 600;
+  padding-bottom: 10px;
+}
+
+p {
+  font-size: 23.09px;
+  font-weight: 400;
+}
+
+.bubble-on {
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 33.0187px;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 23.09px;
+  font-weight: 600;
+}
+
+.card p {
+  font-weight: 300;
+}
+
+.task-name {
+  font-weight: 600;
+}
+
+.task-date {
+  font-size: 16.3939px;
+}
+
+/* TASk.HTML */
+.input-name label {
+  font-size: 23.09px;
+  font-weight: 400;
+}
+
+input {
+  font-size: 33.0187px;
+  font-weight: 600;
+}
+
+.input-button a {
+  font-size: 23.09px;
+  font-weight: 600;
+}
+
+h1 {
+  color: #2E3A59;
+}
+
+h2, h3 {
+  color: white;
+}
+
+p {
+  color: rgba(46, 58, 89, 0.54);
+}
+
+.card {
+  background: linear-gradient(177.23deg, #9C2CF3 -13.49%, #3A49F9 109.75%);
+}
+
+.card p {
+  color: white;
+}
+
+.task h2 {
+  color: #2E3A59;
+}
+
+.task-bg {
+  background-color: white;
+}
+
+.task-icon {
+  background: linear-gradient(177.23deg, #9C2CF3 -13.49%, #3A49F9 109.75%);
+}
+
+.task-name {
+  color: #2E3A59;
+}
+
+.task-date {
+  color: #AEAEB3;
+}
+
+/* TASK.HTML */
+.main-box {
+  background: linear-gradient(177.23deg, #707CED -4.5%, #14458E 109.75%);
+}
+
+.input-name label {
+  color: white;
+}
+
+input, input::-webkit-input-placeholder {
+  color: white;
+}
+
+input, input:-ms-input-placeholder {
+  color: white;
+}
+
+input, input::-ms-input-placeholder {
+  color: white;
+}
+
+input, input::placeholder {
+  color: white;
+}
+
+.input-button a {
+  background-color: #5E6CEA;
+  color: white;
+}
+
+.bubble {
+  background-color: #E5EAFC;
+  text-align: center;
+  padding: 23px 38px;
+  border-radius: 75px;
+}
+
+.bubble-on {
+  background-color: white;
+  text-align: center;
+  padding: 23px 44px;
+  border-radius: 75px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+html {
+  background-color: #F2F5FF;
+}
+
+.navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 55px 50px;
+}
+
+.text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0 50px 50px;
+}
+
+.bubble-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  padding: 0 50px;
+}
+
+.card {
+  border-radius: 20px;
+  margin: 32px 50px;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before, .card::after {
+  content: '';
+  position: absolute;
+  width: 530px;
+  height: 416px;
+  border-radius: 100%;
+  background-color: #242736;
+  opacity: 0.08;
+}
+
+.card::before {
+  bottom: -270px;
+  left: -200px;
+}
+
+.card::after {
+  top: -270px;
+  right: -130px;
+}
+
+.card-content {
+  padding: 37px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.card-heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card-heading h3 {
+  margin: 0 18px;
+}
+
+.card-title {
+  padding: 32px 0 103px;
+}
+
+.task {
+  margin: 45px 50px;
+}
+
+.task-title {
+  margin-bottom: 37px;
+}
+
+.task-bg {
+  border-radius: 20px;
+  padding: 30px;
+  margin-bottom: 20px;
+}
+
+.task-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: -nowrap;
+      flex-wrap: -nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.task-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: -nowrap;
+      flex-wrap: -nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.task-icon {
+  padding: 16px 16px 10px;
+  border-radius: 10px;
+}
+
+.task-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: -nowrap;
+      flex-wrap: -nowrap;
+  padding: 0 25px;
+}
+
+.task-name {
+  padding-bottom: 8px;
+}
+
+.task-menu {
+  height: 29px;
+}
+
+.footer {
+  margin: 50px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.footer-navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+/* TASK.HTML */
+.main-box {
+  position: relative;
+  overflow: hidden;
+}
+
+.main-box::before {
+  content: '';
+  position: absolute;
+  width: 410px;
+  height: 492px;
+  border-radius: 100%;
+  background-color: #2E3A59;
+  opacity: 0.15;
+  top: -280px;
+  right: -90px;
+}
+
+.main-box-content {
+  position: relative;
+  z-index: 1;
+}
+
+.navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 10px;
+}
+
+.input-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: -content;
+      -ms-flex-pack: -content;
+          justify-content: -content;
+  -ms-flex-wrap: -nowrap;
+      flex-wrap: -nowrap;
+  margin: 0 50px;
+}
+
+label {
+  margin-bottom: 16px;
+}
+
+input {
+  border: none;
+  border-bottom: 1px solid rgba(215, 221, 240, 0.5);
+  background: none;
+  margin-bottom: 24px;
+}
+
+.input-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: -nowrap;
+      flex-wrap: -nowrap;
+  padding: 60px 0 40px;
+}
+
+.input-button a {
+  padding: 24px 113px;
+  border-radius: 4px;
+}
+/*# sourceMappingURL=styles.css.map */

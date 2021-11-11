@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+$base-font-size: 23.09px;
+$base-font-weight: 400;
+
+$font-size-titles: #{$base-font-size * 2};
+$font-weight-titles: #{$base-font-weight * 1.5};
+
+$font-size-p: #{$base-font-size};
+$font-weight-p: $base-font-weight;
+
+$font-size-subtitles: #{$base-font-size * 1.43};
+
+$font-size-task-date: #{$base-font-size * 0.71};
+
+html {
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    font-size: $font-size-titles;
+    font-weight: $font-weight-titles;
+    padding-bottom: 10px;
+}
+
+p {
+    font-size: $font-size-p;
+    font-weight: $font-weight-p;
+}
+
+.bubble-on {
+    font-weight: $font-weight-titles;
+}
+
+h2 {
+    font-size: $font-size-subtitles;
+    font-weight: $font-weight-titles;
+}
+
+h3 {
+    font-size: $base-font-size;
+    font-weight: $font-weight-titles;
+}
+
+.card {
+    p {
+        font-weight: $base-font-weight*0.75;
+    }
+}
+
+.task {
+    &-name {
+        font-weight: $font-weight-titles;
+    }
+
+    &-date {
+        font-size: $font-size-task-date;
+    }
+}
+
+/* TASk.HTML */
+
+.input-name {
+    label {
+        font-size: $base-font-size;
+        font-weight: $font-weight-p;
+    }
+}
+
+input {
+    font-size: $font-size-subtitles;
+    font-weight: $font-weight-titles;
+}
+
+.input-button a {
+    font-size: $base-font-size;
+    font-weight: $font-weight-titles;
+}
