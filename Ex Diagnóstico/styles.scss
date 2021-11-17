@@ -1,0 +1,194 @@
+@import 'typography';
+@import 'colors';
+
+@mixin flex($direction, $justify-content, $align-items, $wrap-nowrap: wrap) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    flex-wrap: $wrap-nowrap;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* --------------- nav --------------- */
+
+html {
+    max-width: 1350px;
+    margin: 0 auto;
+}
+.home {
+    background: url(images/main-background.png) no-repeat;
+}
+
+.nav {
+    background-color: $main-color-60;
+    color: $secondary-color;
+    padding: 50px 60px;
+    ul {
+        @include flex(row, space-between, center, -nowrap);
+    }
+    li {
+        font-family: $main-font;
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    &-opacity {
+        background-color: $main-color;
+        color: $secondary-color;
+        padding: 50px 60px;
+
+        ul {
+            @include flex(row, space-between, center, -nowrap);
+        }
+
+        li {
+            font-family: $main-font;
+            font-size: 18px;
+            font-weight: 700;
+        }
+    }
+}
+
+/* --------------- home --------------- */
+.landing {
+    &-title {
+        font-family: $main-font;
+        font-size: 48px;
+        font-weight: 300;
+        color: $secondary-color;
+        padding: 647px 60px 66px;
+        margin-right: 40%;
+    }
+}
+
+
+
+/* --------------- menu --------------- */
+
+.menu {
+    padding: 60px;
+    padding-bottom: 221px;
+    background-color: $main-color;
+    &-options {
+        &-list { 
+            @include flex(column, -content, -items, -nowrap);
+            color: $secondary-color;
+            font-family: $main-font;
+            font-size: 72px;
+            font-weight: 700;
+            & li {
+                margin-bottom: 60px;
+
+                &:hover {
+                    color: $red;
+                }
+            }
+
+            & li:first-of-type {
+                color: $red;
+            }
+        }
+    }
+}
+
+
+/* --------- WORK --------- */
+
+.work {
+    background-color: #121212;
+    padding: 40px 20px 60px;
+    &-options {
+        &-list {
+            ul {
+                padding-bottom: 20px;
+                @include flex(row, -content, -items, -nowrap);
+                li {
+                    padding: 0 30px;
+                    font-family: $main-font;
+                    font-size: 24px;
+                    font-weight: 400;
+                    color: $secondary-color;
+
+                    &:first-of-type {
+                        padding-left: 0;
+                        color: $red;
+                    }
+
+                    &:hover {
+                        color: $red;
+                    }
+                }
+            }
+        }
+        &-cards {
+            @include flex(row, space-between, center, wrap);
+            .card {
+                position: relative;
+                margin-bottom: 10px;
+
+                p {
+                    position: absolute;
+                    display: block;
+                    top: 20px;
+                    right: 0;
+                    bottom: 0;
+                    left: 20px;
+                    line-height: 1.4;
+                    opacity: 0;
+                    font-family: $main-font;
+                    font-size: 16px;
+                    font-weight: 300;
+                    color: $secondary-color;
+                }
+
+                &:hover {
+                    img {
+                        opacity: 0.6;
+                    }
+
+                    p {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+
+}
+.menu-pagination {
+    &-navigation {
+        @include flex(row, space-between, -items, -nowrap);
+        p {
+            padding-top: 40px;
+            font-family: $main-font;
+            font-size: 24px;
+            font-weight: 400;
+            color: $secondary-color;
+
+            &:hover {
+                color: $red;
+            }
+        }
+    }
+}
+
+.footer {
+    background-color: $main-color-60;
+    padding: 60px 30px;
+    &-content {
+        font-family: $main-font;
+        font-size: 16px;
+        font-weight: 400;
+        color: $secondary-color;
+        @include flex(row, space-between, -items, -nowrap)
+    }
+}
