@@ -1,0 +1,71 @@
+$base-color-title: #2E3A59;
+$base-color-p: rgba(46, 58, 89, 0.54);
+$base-color-white: white;
+$base-color-task-date: #AEAEB3;
+$base-color-card-gradient: linear-gradient(177.23deg, #9C2CF3 -13.49%, #3A49F9 109.75%);
+$base-color-task-html: linear-gradient(177.23deg, #707CED -4.5%, #14458E 109.75%);
+$base-color-task-button: #5E6CEA;
+
+
+
+h1 {
+    color: $base-color-title;
+}
+
+h2, h3 {
+    color: $base-color-white;
+}
+
+p {
+    color: $base-color-p;
+}
+
+.card {
+    background: $base-color-card-gradient;
+    p {
+        color: $base-color-white;
+    }
+}
+
+.task {
+    h2 {
+        color: $base-color-title;   
+    }
+
+    &-bg {
+        background-color: $base-color-white;
+    }
+
+    &-icon {
+        background: $base-color-card-gradient;
+    }
+
+    &-name {
+        color: $base-color-title;
+    }
+
+    &-date {
+        color: $base-color-task-date;
+    }
+}
+
+/* TASK.HTML */
+
+.main-box {
+    background: $base-color-task-html;
+}
+
+.input-name {
+    label {
+        color: $base-color-white;
+    }
+}
+
+input, input::placeholder {
+    color: $base-color-white;
+}
+
+.input-button a {
+    background-color: $base-color-task-button;
+    color: $base-color-white;
+}
