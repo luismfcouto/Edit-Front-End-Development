@@ -1,0 +1,13 @@
+@import 'normalize';
+@import 'variables';
+@import 'utils';
+@import 'grid';
+
+
+.card {
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+}
