@@ -1,0 +1,52 @@
+.gridrow{
+    width: $gridwidth;
+    margin: 0 auto;
+    @media(min-width: $tablet){
+        width: $gridwidtht;
+    }
+    @media(min-width: $desktop){
+        width: $gridwidthd;
+    }
+    @media(min-width: $desktoplg){
+        width: $gridwidthdlg;
+    }
+}
+
+.gridrow{
+    display: flex;
+    flex-wrap: wrap;
+    .col{
+        flex: 1;
+        box-sizing: border-box;
+        padding-left: $gridgutter / 2;
+        padding-right: $gridgutter / 2;
+    }
+    @for $i from 1 through $gridcolumns-mobile {
+        .col-#{$i} {
+            box-sizing: border-box;
+            width: percentage($i/$gridcolumns-mobile);
+            padding-left: $gridgutter / 2;
+            padding-right: $gridgutter / 2;
+        }
+    }
+    @media all and (min-width: $tablet) {
+        @for $i from 1 through $gridcolumns {
+            .col-t-#{$i} {
+                box-sizing: border-box;
+                width: percentage($i/$gridcolumns);
+                padding-left: $gridgutter / 2;
+                padding-right: $gridgutter / 2;
+            }
+        }
+    }
+    @media all and (min-width: $desktop) {
+        @for $i from 1 through $gridcolumns {
+            .col-d-#{$i} {
+                box-sizing: border-box;
+                width: percentage($i/$gridcolumns);
+                padding-left: $gridgutter / 2;
+                padding-right: $gridgutter / 2;
+            }
+        } 
+    }
+}
