@@ -1,0 +1,275 @@
+@import 'typography';
+@import 'colors';
+
+@mixin flex($direction, $justify-content, $align-items, $wrap-nowrap: wrap) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    flex-wrap: $wrap-nowrap;
+}
+
+
+/* -------------------- global -------------------- */
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+nav {
+    padding: 16px;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    top: 39px;
+    &-different {
+        position: absolute;
+        top: 73px;
+        transform: translate(-50%, -50%);
+        left: 50%; 
+    }
+}
+
+.profile {
+    margin-right: 32px;
+}
+
+main {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    @include flex(column, center, -items, -nowrap);
+}
+
+
+/* -------------------- HOME -------------------- */
+
+/* promotion message */
+
+.promotion {
+    background-color: $main-color-10;
+    @include flex(row, center, -items, -nowrap);
+    &-message {
+        color: $main-color;
+        font-family: $main-font;
+        font-size: $font-size-l;
+        font-style: italic;
+        padding: 8px 0;
+    }
+}
+
+
+/* landing section */
+
+.landing {
+    width: 100%;
+    padding: 0 16px;
+    &-choice {
+        width: 100%;
+        @include flex(row, space-between, -items, -nowrap);
+    }
+    &-person {
+        width: 48%;
+        @include flex(row, -content, center, -nowrap);
+        font-family: $main-font;
+        font-size: $font-size-s;
+
+        &__image {
+            position: relative;
+            height:75vh;
+            width: 90%;
+        }
+
+        &:first-of-type {
+            p {
+                text-align: left;
+            }
+            .arrow-left {
+                padding-right: 38px;
+            }
+            .landing-person__image{
+                background: url('images/men-large.png') no-repeat center;
+            }
+            .men-inverted {
+                background: url('images/men-large-inverted.png') no-repeat center;
+                position: absolute;
+                top: 0;
+                left: 0;
+                height:75vh;
+                width: 100%;
+                opacity: 0;
+            }
+            &:hover {
+                ~ .landing-person:last-of-type {
+                    .women-inverted {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+
+        &:last-of-type {
+            p {
+                text-align: right;
+            }
+            .arrow-right {
+                padding-left: 38px;
+            }
+            .landing-person__image {
+                background: url('images/women-large.png') no-repeat center;
+            }
+            .women-inverted {
+                background: url('images/women-large-inverted.png') no-repeat center;
+                position: absolute;
+                top: 0;
+                left: 0;
+                height:75vh;
+                width: 100%;
+                opacity: 0;
+            }
+
+            &:hover {
+                ~ .landing-person {
+                    background-color: red;
+                    .men-inverted {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        &-arrow {
+            p {
+                padding-bottom: 8px;  
+            }
+        }
+    }
+
+    &-text {
+        @include flex(row, center, -items, -nowrap);
+        margin: 24px 0 60px;
+    }
+
+    &-description {
+        font-family: $secondary-font;
+        font-size: $font-size-m;
+    }
+}
+
+
+/* product section */
+
+.products {
+    width: 100%;
+    padding: 0 16px;
+    &-title {
+        color: $main-color;
+        font-family: $main-font;
+        font-size: $font-size-l;
+        padding: 24px 0;
+    }
+    &-list {
+        width: 100%;
+        @include flex(row, space-between, -items, -nowrap);
+        padding: 8px 0;
+
+        img {
+            border-radius: 10px;
+            margin-bottom: 10px;  
+        }
+    }
+    &-item {
+        width: 30%;
+        font-family: $secondary-font;
+        font-size: $font-size-m;
+        font-weight: 700;
+        &__price {
+            color: $main-color-50;
+            margin-top: 5px;
+        }
+        .img-placeholder {
+            height: 20vh;
+            width: 100%;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            padding-bottom: 85%;
+            height: 0;
+            max-width: 300px;
+        }
+        &:first-of-type {
+            .img-placeholder {
+                background: url('images/ph1-large.png') no-repeat center;
+                background-size: cover;
+            }
+        }
+        &:nth-child(2) {
+            .img-placeholder {
+                background: url('images/ph2-large.png') no-repeat center;
+                background-size: cover;
+            }
+        }
+        &:last-of-type {
+            .img-placeholder {
+                background: url('images/ph3-large.png') no-repeat center;
+                background-size: cover;
+            }
+        }
+    }
+}
+
+.button {
+    width: 100%;
+    padding: 24px 0;
+    .btn {
+        @include flex(row, center, center, -nowrap);
+        max-width: 451px;
+        background: $main-color;
+        color: $secondary-color;
+        border-radius: 4px;
+        padding: 16px 0;
+        font-family: $main-font;
+        font-size: $font-size-l;
+        text-align: center;
+        margin: 0 auto;
+        border: 3px solid transparent;
+
+        &:hover {
+            background-color: $secondary-color;
+            color: $main-color;
+            border: 3px solid $main-color;
+        }
+    }
+}
+
+
+
+
+
+    * {
+        transition: ease all .5s; 
+    }
+
+
+@media all and (min-width:700px) {
+    nav {
+        padding: 16px 80px;
+        transition: ease all .5s;
+    }
+
+    .landing, .products {
+        padding: 0 80px;
+        transition: ease all .5s;
+    }
+}
